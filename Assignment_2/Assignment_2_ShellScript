@@ -1,0 +1,22 @@
+#! /bin/bash
+echo "Enter name of dir":
+read filename
+mkdir -p $filename// to create direcotry from user
+cd datt
+echo 'Hello, world.' >datt1.txt
+echo 'Hi, world.' >datt2.txt
+echo 'Hello, india.' >datt3.txt
+echo 'Hello, sanket.' >datt4.txt
+cd ..
+zip -r datt.zip datt
+echo "Reverse the name of datt directory to ttad ":
+read filename
+unzip datt.zip -d ttad
+mv datt1.txt ttad/
+mv datt2.txt ttad/
+mv datt3.txt ttad/
+mv datt4.txt ttad/
+rm -r datt
+cd ttad
+ls
+
