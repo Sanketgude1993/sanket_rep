@@ -1,0 +1,153 @@
+//Hospital Management System
+
+*Application Features
+  Patient Login
+    Search Hospitals
+    search specialist
+    Appointment Booking
+    Online Consulting
+    Reuest Home visit
+    online payment
+    patient query
+    feedback
+  Doctor Login
+    Assign Appointement
+    checkup history
+        symptoms
+        diagnosis
+        prescription
+    refer another doctor
+  Emergency
+  insurance application
+  generate bill
+  Pharmacy for medicine
+  review for doctors
+
+*Tables
+  user
+    user_id
+    name
+    mail
+    password
+    address
+    date_of_birth
+    age
+    gender
+    contact_no
+    blood group
+    frequent donor
+
+  Address
+    id
+    street
+    landmark
+    city
+    state
+    country
+
+
+  Patient
+    Patient_id
+    weight
+    height
+    symptoms
+    date_of_treatement
+
+  Doctor
+    doctor_id
+    speciality
+    qualification
+    dr_fees
+    another_reffrence
+
+  DoctorAvailable
+    id
+    date_avalaible
+    time_available
+    session
+    slot start
+    slot end
+    status
+
+  Role
+    id
+    role_assigned
+
+  Appointment
+    appointment_id
+    date_of_application
+    Assigned_doctor
+
+  Home_visit
+    id
+    dr_visited
+    date&time
+
+
+
+  Bill_geration
+    bill_id
+    test_charges
+    room_charges
+
+
+
+  Health_Insurance
+    id
+    nominee
+    realtion
+    occupation
+    health_issues
+    documents_submitted
+
+
+  Query
+    query_id
+    query_description
+    date_of_query
+
+  Feedback
+    feedback_id
+    suggetion
+    hospital_location
+    date_of_feedback
+
+
+  online_payment
+    payment_id
+    payment_date & time
+
+
+  Pharmacy
+    id
+    medicine_name
+    medicine_company
+    medicine_category
+    stok_availibility
+    sold
+    price
+    reffred_by
+
+  Review
+    reviewable id
+    reviewable type
+    message
+    date
+
+  Prescription
+    id
+    date
+    quantity
+
+
+
+
+
+
+
+
+
+
+
+
+
