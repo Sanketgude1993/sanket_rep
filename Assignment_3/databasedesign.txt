@@ -36,7 +36,7 @@
     role_id(f key)
 
   Address
-    id
+    Address_id
     street
     landmark
     city
@@ -60,7 +60,7 @@
     doctor_id(f)
 
   DoctorAvailable
-    DoctorAvailable id
+    DoctorAvailable_id
     slot start
     slot end
     status
@@ -80,13 +80,6 @@
     appointment_type
     status
     patient_id(f)
-
-  Prescription
-    id
-    date
-    priscription
-    appointment_id(f)
-    doc_id(f)
 
   Bill_geration
     bill_id
@@ -132,7 +125,7 @@
     appointment_id(f)
 
   Review
-    reviewable id
+    reviewable_id
     reviewable type
     rating
     message
@@ -140,14 +133,14 @@
     patient_id(f)
 
   Prescription
-    id
+    Prescription_id
     date
     priscription
     appointment_id(f)
     doc_id(f)
 
   PrescriptionMedicine
-    id
+    PrescriptionMedicine_id
     user_id(f)
     medicine_id
     quantity
@@ -179,7 +172,7 @@
     date
 
   PatientHealthIssues
-    id
+    PatientHealthIssues_id
     HealthIssues_id(f)
     user_id(f)
     date
