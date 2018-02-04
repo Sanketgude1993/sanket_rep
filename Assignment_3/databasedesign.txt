@@ -25,17 +25,15 @@
     review for doctors
 
 *Tables
-    user
+  users
     user_id
     name
-    mail
+    email
     password
-    address
     date_of_birth
     gender
     contact_no
     role_id(f key)
-    reg_id(f key)
 
   Address
     id
@@ -46,48 +44,47 @@
     country
     user_id(f key)
 
-    Patient
-    Patient_id
-    frequent donor
-    weight
-    height
-    symptoms
-    health_issues
-    date_of_treatement
-    blood group
-    dr_assigned_to(f key)
-
-
   Doctor
     doctor_id
     qualification
     dr_fees
 
+  DoctorClinics
+    DoctorClinics_id
+    Address
+    Available_days
+
+  Days
+    days_id
+    day
+    doctor_id(f)
+
   DoctorAvailable
-    id
-    date_avalaible
+    DoctorAvailable id
     slot start
     slot end
     status
     available
+    available_days
 
   Role
-    id
-    role_assigned
+    role_id
+    name
 
   Appointment
     appointment_id
-    date_of_application
+    date_of_appointement
     Assigned_doctor
     Appointement_time_from
     Appointement_time_to
     appointment_type
+    status
     patient_id(f)
 
   Prescription
     id
     date
-    priscription_img
+    priscription
     appointment_id(f)
     doc_id(f)
 
@@ -100,32 +97,31 @@
     id
     nominee_id(f)
     doc_id(f)
-    patient_id(f)
+    user_id(f)
 
- nominee
-    id
+  Nominee
+    nominee_id
     name
     relation
     occupation
 
  Documents
-    id
+    document_id
     documents_name
     date&time
-
 
   Query
     query_id
     query_description
     date_of_query
-    patient_id(f)
+    user_id(f)
 
   Feedback
     feedback_id
     suggetion
     hospital_location
     date_of_feedback
-    patient_id(f)
+    user_id(f)
 
   online_payment
     payment_id
@@ -143,6 +139,19 @@
     date
     patient_id(f)
 
+  Prescription
+    id
+    date
+    priscription
+    appointment_id(f)
+    doc_id(f)
+
+  PrescriptionMedicine
+    id
+    user_id(f)
+    medicine_id
+    quantity
+
 	Medicine
     medicine_id
     medicine_name
@@ -151,16 +160,29 @@
     stok_availibility
     sold
     price
+    description
 
-	Medicinebill
-    medbill id
-    patient_id(f)
-    doc_id(f)
-    date&time(f)
-    total_price
+  HealthIssues
+    HealthIssues_id
+    date
+    type
 
-	MedicineBillItems
+  Symptoms
+    Symptoms_id
+    date
+    type
+
+  PatientSymptoms
+    PatientSymptoms_id
+    Symptoms_id(f)
+    user_id(f)
+    date
+
+  PatientHealthIssues
     id
-    medbill id(f)
-    medicine_id(f)
-    price
+    HealthIssues_id(f)
+    user_id(f)
+    date
+
+
+
