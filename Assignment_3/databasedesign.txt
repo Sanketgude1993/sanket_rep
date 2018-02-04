@@ -1,0 +1,165 @@
+
+ +//Hospital Management System
+ +
+ +*Application Features
+    Patient Login
+    Search Hospitals
+    search specialist
+    Appointment Booking
+    Online Consulting
+    Request Home visit
+    online payment
+    patient query
+    feedback
+    Doctor Login
+    Assign Appointement
+    checkup history
+    symptoms
+    diagnosis
+    prescription
+    refer another doctor
+    Emergency
+    insurance application
+    generate bill
+    Pharmacy for medicine
+    review for doctors
+
+*Tables
+    user
+    user_id
+    name
+    mail
+    password
+    address
+    date_of_birth
+    gender
+    contact_no
+    role_id(f key)
+    reg_id(f key)
+
+  Address
+    id
+    street
+    landmark
+    city
+    state
+    country
+    user_id(f key)
+
+    Patient
+    Patient_id
+    frequent donor
+    weight
+    height
+    symptoms
+    health_issues
+    date_of_treatement
+    blood group
+    dr_assigned_to(f key)
+
+
+  Doctor
+    doctor_id
+    qualification
+    dr_fees
+
+  DoctorAvailable
+    id
+    date_avalaible
+    slot start
+    slot end
+    status
+    available
+
+  Role
+    id
+    role_assigned
+
+  Appointment
+    appointment_id
+    date_of_application
+    Assigned_doctor
+    Appointement_time_from
+    Appointement_time_to
+    appointment_type
+    patient_id(f)
+
+  Prescription
+    id
+    date
+    priscription_img
+    appointment_id(f)
+    doc_id(f)
+
+  Bill_geration
+    bill_id
+    appointment_id(f)
+    charges
+
+  Health_Insurance
+    id
+    nominee_id(f)
+    doc_id(f)
+    patient_id(f)
+
+ nominee
+    id
+    name
+    relation
+    occupation
+
+ Documents
+    id
+    documents_name
+    date&time
+
+
+  Query
+    query_id
+    query_description
+    date_of_query
+    patient_id(f)
+
+  Feedback
+    feedback_id
+    suggetion
+    hospital_location
+    date_of_feedback
+    patient_id(f)
+
+  online_payment
+    payment_id
+    payment_date & time
+    card_type
+    amount
+    payment_status
+    appointment_id(f)
+
+  Review
+    reviewable id
+    reviewable type
+    message
+    date
+    patient_id(f)
+
+	Medicine
+    medicine_id
+    medicine_name
+    medicine_company
+    medicine_category
+    stok_availibility
+    sold
+    price
+
+	Medicinebill
+    medbill id
+    patient_id(f)
+    doc_id(f)
+    date&time(f)
+    total_price
+
+	MedicineBillItems
+    id
+    medbill id(f)
+    medicine_id(f)
+    price
