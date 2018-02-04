@@ -138,6 +138,7 @@
   Review
     reviewable id
     reviewable type
+    rating
     message
     date
     patient_id(f)
