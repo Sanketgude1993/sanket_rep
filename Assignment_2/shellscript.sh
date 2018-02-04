@@ -9,6 +9,13 @@ zip -r $filename.zip $filename
 reverse=$(echo $filename | rev)
 mkdir -p $reverse
 unzip $filename.zip -d $reverse
-
+srcdir="$reverse/$filename"
+dstdir="$reverse"
+for file in ${srcdir}/*
+do
+    dstfile=$(basename $file)
+    cp $file $dstdir/$dstfile
+done
+rm -r $reverse/$filename
 
 
