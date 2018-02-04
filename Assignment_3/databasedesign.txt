@@ -1,7 +1,7 @@
 
  +//Hospital Management System
- +
- +*Application Features
+
+*Application Features
     Patient Login
     Search Hospitals
     search specialist
