@@ -1,3 +1,17 @@
+array_1 = [2, 4, 6, 8, 10]
+ # => [2, 4, 6, 8, 10] 
+array_2 = [1, 5, 6, 8, 11, 12]
+ # => [1, 5, 6, 8, 11, 12] 
+hash_1 = {a: 'a', b: 'b', c: 'c', d: 'd', e: 'e'}
+ # => {:a=>"a", :b=>"b", :c=>"c", :d=>"d", :e=>"e"} 
+hash_2 = {x: '10', y: '20', z: '30'}
+ # => {:x=>"10", :y=>"20", :z=>"30"} 
+   
+
+
+
+
+
 
 puts "1.Print 'Hello World' 10 times"
 	10.times{puts "hello world"}
@@ -35,6 +49,7 @@ puts "3.Comabine array_1 & array_2 and make elements it uniq "
 a=[]
 a=array_1 + array_2
 a.uniq 
+puts a
 
 # 3.Comabine array_1 & array_2 and make elements it uniq
 # []
@@ -64,22 +79,51 @@ a.each { |x| puts x if x>8 }
 puts" 6. array_1 make cubes of all elements and add them "
 sum=0
 a.map! {|num| num ** 3}
-a.sum
+puts a.sum
 # 6. array_1 make cubes of all elements and add them
 # [8, 64, 216, 512, 1000, 1, 125, 216, 512, 1331, 1728] 
 # 5713
 
 puts "7.Combine array_1 & array_2 and find index of '8'"
-a.find_index(8)
+puts a.find_index(8)
 # 7.Combine array_1 & array_2 and find index of '8'
 # 1
 
 puts "8.array_1: add 5 to each element"
-array_1.map{|num|  num+=5}
+puts array_1.map{|num|  num+=5}
 # 8.array_1: add 5 to each element
 # [7, 9, 11, 13, 15] 
 
-puts "9.replace values of hash_1 with elements from array_1"
+puts "9.combine hash_1 & hash_2"
+puts hash_1.merge(hash_2)
+# {:a=>"a", :b=>"b", :c=>"c", :d=>"d", :e=>"e", :x=>"10", :y=>"20", :z=>"30"}
+
+puts "10.replace values of hash_1 with elements from array_1"
+
+
+
+
+
+puts "11.Make sum of integer values of hash_2"
+a=hash_2.values
+puts a.inject(0){|i,a| i+a.to_i}
+
+
+
+
+
+
+
+
+
+
+puts "12.Make upcase of all values of hash_1"
+puts hash_1.each { |k, v| hash_1[k] = v.upcase }
+# Make upcase of all values of hash_1
+# {:a=>"A", :b=>"B", :c=>"C", :d=>"D", :e=>"E"} 
+
+
+
 
 
 
